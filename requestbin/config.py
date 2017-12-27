@@ -12,7 +12,7 @@ CORS_ORIGINS = "*"
 FLASK_SESSION_SECRET_KEY = os.environ.get("SESSION_SECRET_KEY", "N1BKhJLnBqLpexOZdklsfDKFJDKFadsfs9a3r324YB7B73AglRmrHMDQ9RhXz35")
 
 BIN_TTL_DAYS = os.environ.get("TTL_DAYS", 2)
-if(isinstance(BIN_TTL_DAYS)):
+if(isinstance(BIN_TTL_DAYS, str)):
     BIN_TTL_DAYS = int(BIN_TTL_DAYS)
 
 BIN_TTL = BIN_TTL_DAYS * 24 * 3600
