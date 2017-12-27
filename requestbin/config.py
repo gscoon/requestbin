@@ -15,6 +15,8 @@ BIN_TTL_DAYS = os.environ.get("TTL_DAYS", 2)
 if(isinstance(BIN_TTL_DAYS, str)):
     BIN_TTL_DAYS = int(BIN_TTL_DAYS)
 
+print ("BIN_TTL_DAYS = " + str(BIN_TTL_DAYS))
+
 BIN_TTL = BIN_TTL_DAYS * 24 * 3600
 STORAGE_BACKEND = "requestbin.storage.memory.MemoryStorage"
 MAX_RAW_SIZE = 1024*10
